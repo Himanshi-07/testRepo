@@ -24,7 +24,7 @@ if (!scriptName || !/^[a-zA-Z0-9-_]+$/.test(scriptName)) {
     throw new Error("Invalid or missing scriptName in input config");
 }
 
-const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/airtable-scripts/${scriptName}.js?ref=${branch}`;
+const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${scriptName}.js?ref=${branch}`;
 
 const headers = { Accept: "application/vnd.github.v3.raw" };
 if (githubToken) {
