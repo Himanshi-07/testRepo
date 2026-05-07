@@ -1,0 +1,12 @@
+{
+    "name": "mcprp-test-repo",
+    "version": "1.0.0",
+    "private": true,
+    "description": "GitHub Actions scripts for Airtable automation.",
+    "engines": {
+        "node": ">=20"
+    },
+    "scripts": {
+        "server-status": "node scripts/server-status.js"
+    }
+}
