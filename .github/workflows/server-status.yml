@@ -1,0 +1,30 @@
+name: Server Status
+
+on:
+    # Every 15 minutes
+    schedule:
+        - cron: "*/15 * * * *"
+    # Allow manual run from the Actions tab
+    workflow_dispatch:
+
+jobs:
+    run-status:
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+
+            - name: Run server status
+              env:
+                  AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+                  AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+                  SERVER_WEBHOOK_URL: ${{ secrets.SERVER_WEBHOOK_URL }}
+                  SERVERS_TABLE: ${{ secrets.SERVERS_TABLE }}
+              run: node scripts/server-status.js
