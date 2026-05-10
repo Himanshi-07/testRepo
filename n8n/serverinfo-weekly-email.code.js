@@ -1,6 +1,9 @@
 /**
  * n8n Code node — ServerInfo weekly email (Done / In progress)
  *
+ * For hands-off runs without pasting (e.g. n8n free tier), use GitHub Actions:
+ *   scripts/serverinfo-weekly-email.js — keep behaviour in sync when you edit either file.
+ *
  * Paste this entire file into an n8n "Code" node that runs AFTER an HTTP Request
  * node that GETs Airtable:
  *   GET https://api.airtable.com/v0/{BASE_ID}/ServerInfo
