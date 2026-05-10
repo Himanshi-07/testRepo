@@ -1,8 +1,8 @@
 /**
  * n8n Code node — ServerInfo weekly email (Done / In progress)
  *
- * For hands-off runs without pasting (e.g. n8n free tier), use GitHub Actions:
- *   scripts/serverinfo-weekly-email.js — keep behaviour in sync when you edit either file.
+ * To auto-load this file from GitHub on each run (no n8n API), use
+ *   n8n/build-email-loader-from-github.code.js in the Code node instead of pasting this file.
  *
  * Paste this entire file into an n8n "Code" node that runs AFTER an HTTP Request
  * node that GETs Airtable:
